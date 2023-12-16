@@ -1,0 +1,39 @@
+<%- include('./layouts/header.ejs') %>
+
+    <div class="container mb-5 mt-5 d-flex flex-md-column align-items-center">
+        <h1>Đăng kí</h1>
+
+        <%
+            if(typeof message !== 'undefined'){
+                %>
+                <p style="color: green;"><%= message %></p>
+                <%
+            } 
+        %> 
+
+        <form action="" method="POST">
+            <div class="row">
+                <div class="col-sm-12">
+                    <input type="name" name="name" placeholder="Nhập tên" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-12">
+                    <input type="email" name="email" placeholder="Nhập email" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-12">
+                    <input type="password" name="password" placeholder="Nhập mật khẩu" required>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-sm-12">
+                    <input type="submit" value="Đăng kí" class="btn btn-info">
+                </div>
+            </div>
+        </form>
+
+    </div>
+
+<%- include('./layouts/footer.ejs') %>
